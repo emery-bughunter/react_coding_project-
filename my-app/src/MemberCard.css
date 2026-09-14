@@ -1,0 +1,47 @@
+/* Author: Betelhem Feleke Chelebo — tasks 21–29 */
+
+.member-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+.member-name {
+  margin-bottom: 8px;
+}
+
+.member-role {
+  margin-bottom: 8px;
+}
+
+.member-tasks {
+  margin-bottom: 8px;
+}
+
+.member-bio {
+  margin-top: 10px;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.active {
+  color: green;
+}
+
+.inactive {
+  color: gray;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .member-card {
+    width: 100%;
+    margin: 8px 0;
+    padding: 15px;
+  }
+}

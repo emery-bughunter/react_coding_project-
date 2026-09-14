@@ -1,8 +1,10 @@
 // Agertu Diriba
 // Author: Chiagbanweghi Moses Peter — tasks 8–10: JSX content, Fragment, MemberCard
-// Author: Igor Noel  — tasks 10–20: reusable typed MemberCard component
+// Author: Igor Noel — tasks 10–20: reusable typed MemberCard component
+// Author: Betelhem Feleke Chelebo — tasks 21–30: styling and responsive dashboard
 
 import MemberCard from "./MemberCard";
+import "./TeamDashboard.css";
 
 interface TeamMember {
   name: string;
@@ -37,16 +39,20 @@ const members: TeamMember[] = [
 
 function TeamDashboard() {
   return (
-    <>
-      <h1>Team Dashboard</h1>
-      <p>
+    <div className="dashboard">
+      <h1 className="dashboard-title">Team Dashboard</h1>
+
+      <p className="dashboard-description">
         This group application helps our team track members, roles, and
         completed tasks in one place.
       </p>
-      {members.map((member) => (
-        <MemberCard key={member.name} {...member} />
-      ))}
-    </>
+
+      <div className="member-grid">
+        {members.map((member) => (
+          <MemberCard key={member.name} {...member} />
+        ))}
+      </div>
+    </div>
   );
 }
 

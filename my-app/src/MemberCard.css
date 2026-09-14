@@ -1,5 +1,7 @@
 /* Author: Betelhem Feleke Chelebo — tasks 21–29 */
 
+/* Author: Matthew Ainomugisha — tasks 41–50 */
+
 .member-card {
   padding: 20px;
   border: 1px solid #ddd;
@@ -44,4 +46,10 @@
     margin: 8px 0;
     padding: 15px;
   }
+}
+
+.member-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
 }

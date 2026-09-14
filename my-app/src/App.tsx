@@ -1,4 +1,4 @@
-// Agertu Diriba
+// Author: Agertu Diriba - Basic Component Creation with TypeScript
 // Author: Chiagbanweghi Moses Peter — tasks 6–7: import and render TeamDashboard
 
 import TeamDashboard from "./TeamDashboard";

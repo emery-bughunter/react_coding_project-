@@ -1,4 +1,4 @@
-// Agertu Diriba
+// Author: Agertu Diriba - Basic Component Creation with TypeScript
 // Author: Chiagbanweghi Moses Peter — tasks 8–10: JSX content, Fragment, MemberCard
 // Author: Igor Noel — tasks 10–20: reusable typed MemberCard component
 // Author: Betelhem Feleke Chelebo — tasks 21–30: styling and responsive dashboard
@@ -51,7 +51,9 @@ function TeamDashboard() {
   // 6. String State: state variable to store a new member's name
   const [newMemberName, setNewMemberName] = useState<string>("");
   const [submittedName, setSubmittedName] = useState<string>("");
-  const [memberFilter, setMemberFilter] = useState<"all" | "active" | "inactive">("all");
+  const [memberFilter, setMemberFilter] = useState<
+    "all" | "active" | "inactive"
+  >("all");
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   // 3 & 4. Update State & Functional Updates (Increase teamScore by 1)
@@ -129,9 +131,20 @@ function TeamDashboard() {
       </p>
 
       {/* Team Score Section (Tasks 1 - 5) */}
-      <div className="score-section" style={{ margin: "20px 0", padding: "15px", background: "rgba(255,255,255,0.05)", borderRadius: "8px" }}>
+      <div
+        className="score-section"
+        style={{
+          margin: "20px 0",
+          padding: "15px",
+          background: "rgba(255,255,255,0.05)",
+          borderRadius: "8px",
+        }}
+      >
         <h2>Team Score: {teamScore}</h2>
-        <button onClick={handleIncrease} style={{ marginRight: "10px", padding: "8px 12px" }}>
+        <button
+          onClick={handleIncrease}
+          style={{ marginRight: "10px", padding: "8px 12px" }}
+        >
           Increase Score (+1)
         </button>
         <button onClick={handleDecrease} style={{ padding: "8px 12px" }}>
@@ -140,11 +153,21 @@ function TeamDashboard() {
       </div>
 
       {/* Add Member Form Section (Tasks 6 - 10) */}
-      <div className="form-section" style={{ margin: "20px 0", padding: "15px", background: "rgba(255,255,255,0.05)", borderRadius: "8px" }}>
+      <div
+        className="form-section"
+        style={{
+          margin: "20px 0",
+          padding: "15px",
+          background: "rgba(255,255,255,0.05)",
+          borderRadius: "8px",
+        }}
+      >
         <h3>Add New Team Member</h3>
         <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: "10px" }}>
-            <label htmlFor="memberName" style={{ marginRight: "10px" }}>Member Name: </label>
+            <label htmlFor="memberName" style={{ marginRight: "10px" }}>
+              Member Name:{" "}
+            </label>
             <input
               id="memberName"
               type="text"
@@ -201,7 +224,9 @@ function TeamDashboard() {
             />
           ))
         ) : (
-          <p className="empty-members">No members match your search or filter.</p>
+          <p className="empty-members">
+            No members match your search or filter.
+          </p>
         )}
       </div>
     </div>

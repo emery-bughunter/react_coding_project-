@@ -1,11 +1,18 @@
-//Agertu Diriba
+// Agertu Diriba
+// Author: Chiagbanweghi Moses Peter — tasks 8–10: JSX content, Fragment, MemberCard
+
+import MemberCard from "./MemberCard";
 
 function TeamDashboard() {
   return (
-    <div>
+    <>
       <h1>Team Dashboard</h1>
-      <p>This application helps our team manage members and tasks.</p>
-    </div>
+      <p>
+        This group application helps our team track members, roles, and
+        completed tasks in one place.
+      </p>
+      <MemberCard />
+    </>
   );
 }
 

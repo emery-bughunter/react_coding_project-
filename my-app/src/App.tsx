@@ -1,12 +1,12 @@
 // Agertu Diriba
+// Author: Chiagbanweghi Moses Peter — tasks 6–7: import and render TeamDashboard
 
 import TeamDashboard from "./TeamDashboard";
 
 function App() {
   return (
     <div>
-      <h1>Team Dashboard</h1>
-      <p>Welcome to our team application.</p>
+      <TeamDashboard />
     </div>
   );
 }

@@ -1,10 +1,27 @@
-// Author: Chiagbanweghi Moses Peter — task 10: reusable MemberCard component
+// Author: Igor Noel  — tasks 10–20: reusable typed MemberCard component
 
-function MemberCard() {
+interface MemberCardProps {
+  name: string;
+  role: string;
+  tasksCompleted: number;
+  isActive: boolean;
+  bio?: string;
+}
+
+function MemberCard({
+  name,
+  role,
+  tasksCompleted = 0,
+  isActive,
+  bio,
+}: MemberCardProps) {
   return (
     <div>
-      <h3>Team Member</h3>
-      <p>Member details will appear here.</p>
+      <h3>{name}</h3>
+      <p>Role: {role}</p>
+      <p>Tasks completed: {tasksCompleted}</p>
+      <p>Status: {isActive ? "Active" : "Inactive"}</p>
+      {bio && <p>Bio: {bio}</p>}
     </div>
   );
 }
